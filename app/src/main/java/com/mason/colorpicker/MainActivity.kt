@@ -3,6 +3,7 @@ package com.mason.colorpicker
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
@@ -52,26 +53,19 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         }
         val hexText = findViewById<TextView>(R.id.hexView)
         val colorView = findViewById<RelativeLayout>(R.id.colorView)
-        val redText = findViewById<TextView>(R.id.labelR)
-        val greenText = findViewById<TextView>(R.id.labelG)
-        val blueText = findViewById<TextView>(R.id.labelB)
+        val textLayout = findViewById<LinearLayout>(R.id.textLayout)
         hexText.text = "#${intToHex(redCol)}${intToHex(greenCol)}${intToHex(blueCol)}"
         hexText.setBackgroundColor(Color.argb(255, redCol, greenCol, blueCol))
-        colorView.setBackgroundColor(Color.argb(255, redCol, greenCol, blueCol))
+        colorView.setBackgroundColor(Color.argb(128, redCol, greenCol, blueCol))
+        textLayout.setBackgroundColor(Color.argb(255, redCol, greenCol, blueCol))
 
         // Check if we need to make text color white
         if (redCol < 128 && greenCol < 128 && blueCol < 128) {
             // Color is dark, use white
             hexText.setTextColor(Color.argb(255, 255, 255, 255))
-            redText.setTextColor(Color.argb(255, 255, 255, 255))
-            greenText.setTextColor(Color.argb(255, 255, 255, 255))
-            blueText.setTextColor(Color.argb(255, 255, 255, 255))
         } else {
             // Color is light, use black
             hexText.setTextColor(Color.argb(255, 0, 0, 0))
-            redText.setTextColor(Color.argb(255, 0, 0, 0))
-            greenText.setTextColor(Color.argb(255, 0, 0, 0))
-            blueText.setTextColor(Color.argb(255, 0, 0, 0))
         }
     }
 

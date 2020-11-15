@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:background="@android:color/transparent"
+    android:background="#FFFFFF"
     tools:context="com.mason.colorpicker.MainActivity">
 
     <TextView
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/labelB"
-        android:background="@android:color/transparent"
+        android:background="#FFFFFF"
         android:orientation="vertical">
 
         <TextView
@@ -86,8 +86,8 @@
             android:gravity="bottom|center"
             android:padding="24dp"
             android:text="#ffffff"
-            tools:ignore="HardcodedText"
             android:textColor="@android:color/black"
-            android:textSize="56sp" />
+            android:textSize="56sp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 </RelativeLayout>
