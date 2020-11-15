@@ -1,25 +1,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/colorView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
+    android:background="#FFFFFF"
     tools:context="com.mason.colorpicker.MainActivity">
+
     <TextView
         android:id="@+id/labelR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="R"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <SeekBar
         android:id="@+id/seekR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/labelR"
-        android:layout_toEndOf="@+id/labelR"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/labelR"
+        android:background="@android:color/transparent"
         android:max="255"
         android:progress="255" />
+
     <TextView
         android:id="@+id/labelG"
         android:layout_width="wrap_content"
@@ -27,17 +33,20 @@
         android:layout_below="@id/labelR"
         android:text="G"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <SeekBar
         android:id="@+id/seekG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/labelG"
         android:layout_below="@+id/seekR"
-        android:layout_toEndOf="@+id/labelG"
+        android:layout_alignBottom="@id/labelG"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/labelG"
+        android:background="@android:color/transparent"
         android:max="255"
         android:progress="255" />
+
     <TextView
         android:id="@+id/labelB"
         android:layout_width="wrap_content"
@@ -52,30 +61,30 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekG"
         android:layout_alignBottom="@id/labelB"
-        android:layout_toEndOf="@+id/labelB"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/labelB"
+        android:background="@android:color/transparent"
         android:max="255"
         android:progress="255" />
+
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/textLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/labelB"
-        android:background="@android:color/darker_gray"
+        android:background="@android:color/transparent"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hexView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/labelB"
-            android:layout_centerHorizontal="true"
             android:layout_margin="24dp"
             android:background="#ffffff"
+            android:gravity="bottom|center"
             android:padding="24dp"
             android:text="#ffffff"
-            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="56sp" />
     </LinearLayout>
