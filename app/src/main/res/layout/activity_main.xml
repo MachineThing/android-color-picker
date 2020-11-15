@@ -1,17 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/colorView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:background="#DFDFDF"
+    android:background="@android:color/transparent"
     tools:context="com.mason.colorpicker.MainActivity">
 
     <TextView
         android:id="@+id/labelR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R"
+        android:text="@string/redStr"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <SeekBar
@@ -31,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/labelR"
-        android:text="G"
+        android:text="@string/greenStr"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <SeekBar
@@ -52,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/labelG"
-        android:text="B"
+        android:text="@string/blueStr"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <SeekBar
@@ -73,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/labelB"
-        android:background="#BFBFBF"
+        android:background="@android:color/transparent"
         android:orientation="vertical">
 
         <TextView
@@ -85,6 +86,7 @@
             android:gravity="bottom|center"
             android:padding="24dp"
             android:text="#ffffff"
+            tools:ignore="HardcodedText"
             android:textColor="@android:color/black"
             android:textSize="56sp" />
     </LinearLayout>

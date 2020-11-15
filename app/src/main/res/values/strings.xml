@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ColorPicker</string>
+    <string name="redStr">R</string>
+    <string name="greenStr">G</string>
+    <string name="blueStr">B</string>
 </resources>
