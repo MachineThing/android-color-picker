@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:background="#FFFFFF"
+    android:background="#DFDFDF"
     tools:context="com.mason.colorpicker.MainActivity">
 
     <TextView
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/labelB"
-        android:background="@android:color/transparent"
+        android:background="#BFBFBF"
         android:orientation="vertical">
 
         <TextView
