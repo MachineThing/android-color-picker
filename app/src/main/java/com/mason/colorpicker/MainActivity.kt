@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide();
+
+        // Bind sliders to custom onProgressChanged function
 
         val redSlider = findViewById<SeekBar>(R.id.seekR)
         val greenSlider = findViewById<SeekBar>(R.id.seekG)
@@ -51,6 +54,9 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
                 blueCol = progress
             }
         }
+
+        // Change colors and text
+
         val hexText = findViewById<TextView>(R.id.hexView)
         val colorView = findViewById<RelativeLayout>(R.id.colorView)
         val textLayout = findViewById<LinearLayout>(R.id.textLayout)
